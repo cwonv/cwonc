@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>원페이지연습</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/bxslider.css" type="text/css">
+  <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  
+  
+</head>
+<body>
+  <nav class="nav">
+        <h1 class="logo">SCULPTOR</h1>
+        <div class="nav-mobile"><i class="fas fa-bars"></i></div>
+    <ul>
+      <li><a href="#section1">MAIN</a></li>
+      <li><a href="#section2">ABOUT</a></li>
+      <li><a href="#section3">COLLECTION</a></li>
+      <li><a href="#section4">STORE</a></li>
+    </ul>
+  </nav>
+
+  <div class="scroll-status"></div>
+
+
+<section id="section1">
+      <div class="slider">
+          <div><img src="images/2.jpg" alt="메인이미지"></div>     
+          <div><img src="images/3.jpg" alt="메인이미지"></div>
+          <div><img src="images/4.jpg" alt="메인이미지"></div>      
+      </div>
+  </section>
+
+
+
+
+
+  <section id="section2">
+    <p class="main_text-1">
+     2021 Spring Collection-"Lowtech" Release
+    </p>
+    <div class="click-me"><a href="#section3">Click Here</a></div>
+    <p class="main_text-2">
+      Sculptor is a team based brand that operates under the goal of designing - creation with great care.<br>Based on New classic. Sculptor emphasis on modest beauty through mannish. and finesse design.<br>Team Sculptor re-create various of trends into our style, incorporationg our design philosophy. 
+    </p>
+  </section>
+  
+  
+  
+  
+  <section id="section3">
+
+    <article class="cont_wrap">
+
+      <div class="contents2">
+        <div class="title1">FURRY FRIENDS®</div>
+          <div class="menu_box_1"><a href="#"><img src="images/p1.jpg"></a></div>
+          <div class="menu_box_1"><a href="#"><img src="images/p2.jpg"></a></div>
+          <div class="menu_box_1"><a href="#"><img src="images/p3.jpg"></a></div>
+          <div class="menu_box_1"><a href="#"><img src="images/p4.jpg"></a></div>
+      </div>
+
+      <div class="contents2">
+        <div class="title2">HANDMADE®</div>
+          <div class="menu_box_1"><a href="#"><img src="images/p5.jpg"></a></div>
+          <div class="menu_box_1"><a href="#"><img src="images/p6.jpg"></a></div>
+          <div class="menu_box_1"><a href="#"><img src="images/p7.jpg"></a></div>
+          <div class="menu_box_1"><a href="#"><img src="images/p8.jpg"></a></div>
+      </div>
+    </article>
+  </section>
+  
+  
+  
+  
+  
+  <section id="section4">
+    <p class="main_text-3">Flagship Store</p>
+    <p class="main_text-4">서울시 마포구 상수동 93-5 스컬프터 플래그쉽스토어<br>02-322-7273 / Weekday - pm 1:00 ~ pm 9:00<br>The national Holiday are off.</p>
+    <p class="main_text-3">Costumer Service</p>
+    <p class="main_text-4">인천광역시 서구 북향로 193번길 101 1층 B동 (22856)<br>070-7566-7273 / Weekday - am 10:00 ~ pm 6:30<br>The Weekend, Holiday are off.</p>
+    <p class="main_text-3">Contact Multi shop</p>
+    <p class="main_text-4">info 일반 문의: info@rootscorp.co.kr<br>Sales 입점, 협업 및 바잉 문의: sales@rootscorp.co.kr<br>Press 협찬 문의: press@rootscorp.co.kr</p>
+  </section>
+
+
+
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="js/jquery.navScroll.js"></script>
+  <script>
+    var $scrollStatus = $('.scroll-status');
+
+    $('.nav').navScroll({
+      mobileDropdown: true,
+      mobileBreakpoint: 768,
+      scrollSpy: true,
+      onScrollStart: function() {
+        $scrollStatus.show();
+        $scrollStatus.text('Started scrolling');
+      },
+      onScrollEnd: function() {
+        $scrollStatus.text('Scrolling ended');
+        setTimeout(function() {
+          $scrollStatus.fadeOut(200);
+        }, 1000);
+      }
+    });
+
+    $('.click-me').navScroll({
+      navHeight: 0
+    });
+
+    $('.nav').on('click', '.nav-mobile', function (e) {
+      e.preventDefault();
+      $('.nav ul').slideToggle('fast');
+    });
+  </script>
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('.slider').bxSlider({
+                    auto: true, // 자동으로 애니메이션 시작
+                    speed: 900, // 애니메이션 속도
+                    pause: 4000, // 애니메이션 유지 시간 (1000은 1초)
+                    mode: 'fade', // 슬라이드 모드 ('fade', 'horizontal', 'vertical')
+                    pager: false, // 페이지 표시 보여짐
+                    captions: true, // 이미지 위에 텍스트를 넣을 수 있음
+                    controls: true,
+                });
+
+            });
+        </script>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</body>
+</html>
